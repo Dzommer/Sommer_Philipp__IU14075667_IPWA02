@@ -32,4 +32,13 @@
                 <p:calendar id="startDate" value="#{testlaufBean.startDate}" pattern="dd.MM.yyyy" />
 
                 <h:outputLabel
+                for="endDate" value="Enddatum:" />
+                <p:calendar id="endDate" value="#{testlaufBean.endDate}" pattern="dd.MM.yyyy" />
+
+                <p:commandButton value="Neuer Testlauf" action="#{testlaufBean.createTestlauf}" update="messages" />
+            </p:panelGrid>
+        </p:panel>
+    </ui:define>
+</ui:composition>
+
 
