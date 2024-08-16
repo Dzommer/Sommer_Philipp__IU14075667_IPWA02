@@ -41,3 +41,7 @@ require4testing
 │ │ │
 │ │ └───pages
 │
+
+## Lizenz
+
+Dieses Projekt steht unter der MIT-Linzenz. Siehe die LICENSE.txt-Datei für weitere Details!
