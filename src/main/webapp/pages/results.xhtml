@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/templates/template.xhtml">
+    <ui:define name="content">
+        <p:panel header="Ergebnisse">
+            <p:growl id="messages" showDetail="true" />
+            <p:dataTable value="#{ergebnisBean.ergebnisse}" var="ergebnis">
+                <p:column headerText="Testfall">
+                    <h:outputText value="#{ergebnis.testCaseId}" />
+                </p:column>
+                <p:column headerText="Tester">
+                    <h:outputText value="#{ergebnis.testerId}" />
+                </p:column>
+                <p:column headerText="Status">
+                    <h:outputText value="#{ergebnis.status}" />
+                </p:column>
+                <p:column headerText="Kommentar">
+                    <h:outputText value="#{ergebnis.comment}" />
+                </p:column>
+            </p:dataTable>
+            <p:panelGrid columns="2">
+                <h:outputLabel for="testCaseId" value="Testfall:" />
+                <h:selectOneMenu id="testCaseId" value="#{ergebnisBean.testCaseId}">
+                    <f:selectItems value="#{testfallBean.testfalle}" var="testcase" itemValue="#{testcase.id}" itemLabel="#{testcase.name}" />
+                </h:selectOneMenu>
+
+                <h:outputLabel for="testerId" value="Tester:" />
+                <h:selectOneMenu id="testerId" value="#{ergebnisBean.testerId}">
+                    <f:selectItems value="#{testerBean.testers}" var="tester" itemValue="#{tester.id}" itemLabel="#{tester.name}" />
+                </h:selectOneMenu>
+
+                <h:outputLabel for="status" value="Status:" />
+                <h:inputText id="status" value="#{ergebnisBean.status}" />
+
+                <h:outputLabel for="comment" value="Kommentar:" />
+                <h:inputTextarea id="comment" value="#{ergebnisBean.comment}" rows="3" />
+
+                <p:commandButton value="Neues Ergebnis" action="#{ergebnisBean.createErgebnis}" update="messages" />
+            </p:panelGrid>
+        </p:panel>
+    </ui:define>
+</ui:composition>
 
