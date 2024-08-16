@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/templates/template.xhtml">
+    <ui:define name="content">
+        <p:panel header="Testfälle">
+            <p:growl id="messages" showDetail="true" />
+            <p:dataTable value="#{testfallBean.testfalle}" var="testfall">
+                <p:column headerText="Name">
+                    <h:outputText value="#{testfall.name}" />
+                </p:column>
+                <p:column headerText="Beschreibung">
+                    <h:outputText value="#{testfall.description}" />
+                </p:column>
+                <p:column headerText="Anforderung">
+                    <h:outputText value="#{testfall.requirementId}" />
+                </p:column>
+            </p:dataTable>
+            <p:panelGrid columns="2">
+                <h:outputLabel for="name" value="Name:" />
+                <h:inputText id="name" value="#{testfallBean.name}" />
+
+                <h:outputLabel for="description" value="Beschreibung:" />
+                <h:inputTextarea id="description" value="#{testfallBean.description}" rows="3" />
+
+                <h:outputLabel for="requirementId" value="Anforderung:" />
+                <h:selectOneMenu id="requirementId" value="#{testfallBean.requirementId}">
+                    <f:selectItems value="#{requirementBean.requirements}" var="req" itemValue="#{req.id}" itemLabel="#{req.name}" />
+                </h:selectOneMenu>
+
+                <p:commandButton value="Neuer Testfall" action="#{testfallBean.createTestfall}" update="messages" />
+            </p:panelGrid>
+        </p:panel>
+    </ui:define>
+</ui:composition>
+
