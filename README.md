@@ -45,3 +45,24 @@ require4testing
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Linzenz. Siehe die LICENSE.txt-Datei für weitere Details!
+
+## Datenbankeinrichtung
+
+Um die Datenbank für dieses Projekt einzurichten, führen Sie die folgenden Schritte aus:
+
+1. **Erstellen Sie eine neue MySQL-Datenbank:**
+    ```sh
+    mysql -u root -p
+    CREATE DATABASE require4testing;
+    ```
+
+2. **Führen Sie das Schema-Skript aus, um die Tabellen zu erstellen:**
+    ```sh
+    mysql -u root -p require4testing < database/schema.sql
+    ```
+
+3. **(Optional) Füllen Sie die Tabellen mit Beispieldaten:**
+    ```sh
+    mysql -u root -p require4testing < database/data.sql
+    ```
+
