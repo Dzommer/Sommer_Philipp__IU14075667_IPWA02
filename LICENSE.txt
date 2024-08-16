@@ -1,0 +1,9 @@
+MIT License
+
+Copyright (c) 2024 [Philipp Sommer, IU14075667]
+
+Hiermit wird unentgeltlich jeder Person, die eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erhält, die Erlaubnis erteilt, in der Software ohne Einschränkung zu handeln, einschließlich und ohne Ausnahme, dem Recht, zu nutzen, kopieren, ändern, zusammenführen, veröffentlichen, verbreiten, unterlizenzieren und/oder zu verkaufen, und Personen, denen die Software zur Verfügung gestellt wird, dies zu gestatten, unter den folgenden Bedingungen:
+
+Der obige Urheberrechtshinweis und dieser Genehmigungshinweis sind in allen Kopien oder wesentlichen Teilen der Software beizufügen.
+
+DIE SOFTWARE WIRD "WIE BESEHEN" BEREITGESTELLT, OHNE JEGLICHE AUSDRÜCKLICHE ODER IMPLIZIERTE GEWÄHRLEISTUNG, EINSCHLIESSLICH DER GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG. IN KEINEM FALL SIND DIE AUTOREN ODER DIE URHEBERRECHTSINHABER HAFTBAR FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER SONSTIGE HAFTUNGEN, OB IN EINER VERTRAGSKLAGE, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE AUS, AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER VERWENDUNG ODER ANDEREN GESCHÄFTEN IN DER SOFTWARE ENTSTEHEN.
