@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/templates/template.xhtml">
+    <ui:define name="content">
+        <p:panel header="Testläufe">
+            <p:growl id="messages" showDetail="true" />
+            <p:dataTable value="#{testlaufBean.testlaufe}" var="testlauf">
+                <p:column headerText="Name">
+                    <h:outputText value="#{testlauf.name}" />
+                </p:column>
+                <p:column headerText="Beschreibung">
+                    <h:outputText value="#{testlauf.description}" />
+                </p:column>
+                <p:column headerText="Startdatum">
+                    <h:outputText value="#{testlauf.startDate}" />
+                </p:column>
+                <p:column headerText="Enddatum">
+                    <h:outputText value="#{testlauf.endDate}" />
+                </p:column>
+            </p:dataTable>
+            <p:panelGrid columns="2">
+                <h:outputLabel for="name" value="Name:" />
+                <h:inputText id="name" value="#{testlaufBean.name}" />
+
+                <h:outputLabel for="description" value="Beschreibung:" />
+                <h:inputTextarea id="description" value="#{testlaufBean.description}" rows="3" />
+
+                <h:outputLabel for="startDate" value="Startdatum:" />
+                <p:calendar id="startDate" value="#{testlaufBean.startDate}" pattern="dd.MM.yyyy" />
+
+                <h:outputLabel
 
